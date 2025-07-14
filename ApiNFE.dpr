@@ -52,7 +52,19 @@ uses
   ACBrNFe.entity.TotalRetTrib in 'src\entity\ACBrNFe.entity.TotalRetTrib.pas',
   ACBrNFe.entity.Transportadora in 'src\entity\ACBrNFe.entity.Transportadora.pas',
   ACBrNFe.entity.Veiculo in 'src\entity\ACBrNFe.entity.Veiculo.pas',
-  ACBrNFe.entity.VolumeTransportadora in 'src\entity\ACBrNFe.entity.VolumeTransportadora.pas';
+  ACBrNFe.entity.VolumeTransportadora in 'src\entity\ACBrNFe.entity.VolumeTransportadora.pas',
+  apinfe.usecase.interfaces in 'src\useCases\apinfe.usecase.interfaces.pas',
+  apinfe.usecase.interfaces.impl.Configuracao in 'src\useCases\impl\apinfe.usecase.interfaces.impl.Configuracao.pas',
+  apinfe.usecase.interfaces.impl.Invoker in 'src\useCases\impl\apinfe.usecase.interfaces.impl.Invoker.pas',
+  apinfe.usecase.interfaces.impl.Ide in 'src\useCases\impl\apinfe.usecase.interfaces.impl.Ide.pas',
+  apinfe.usecase.interfaces.impl.Emitente in 'src\useCases\impl\apinfe.usecase.interfaces.impl.Emitente.pas',
+  apinfe.usecase.interfaces.impl.Dest in 'src\useCases\impl\apinfe.usecase.interfaces.impl.Dest.pas',
+  apinfe.usecase.interfaces.impl.Produto in 'src\useCases\impl\apinfe.usecase.interfaces.impl.Produto.pas',
+  apinfe.usecase.interfaces.impl.Total in 'src\useCases\impl\apinfe.usecase.interfaces.impl.Total.pas',
+  apinfe.usecase.interfaces.impl.Fatura in 'src\useCases\impl\apinfe.usecase.interfaces.impl.Fatura.pas',
+  apinfe.usecase.interfaces.impl.Duplicata in 'src\useCases\impl\apinfe.usecase.interfaces.impl.Duplicata.pas',
+  apinfe.usecase.interfaces.impl.Pagamento in 'src\useCases\impl\apinfe.usecase.interfaces.impl.Pagamento.pas',
+  apinfe.usecase.interfaces.impl.GerarNfe in 'src\useCases\impl\apinfe.usecase.interfaces.impl.GerarNfe.pas';
 
 procedure IniciarHorse;
 begin
@@ -66,13 +78,24 @@ end;
 
 procedure IniciarSwagger;
 begin
-  Swagger.Version('2.0').AddProtocol(TGBSwaggerProtocol.gbHttp)
-    .Config.Language('pt-BR').&End.Info.Title('API NFE')
-    .Description('Api Emissora de NF-e').Contact.Name('Lucas Aprigio')
-    .Email('lucas@hotmail.com').&End.&End.&End;
+  Swagger
+  .Version('2.0')
+  .AddProtocol(TGBSwaggerProtocol.gbHttp)
+  .Config.Language('pt-BR')
+  .&End
+  .Info
+   .Title('API NFE')
+   .Description('Api Emissora de NF-e')
+   .Contact
+    .Name('Lucas Aprigio')
+    .Email('lucas@hotmail.com')
+   .&End
+  .&End
+.&End;
 end;
 
 begin
-  IniciarHorse;
   IniciarSwagger;
+  IniciarHorse;
+
 end.

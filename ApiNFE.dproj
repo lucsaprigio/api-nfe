@@ -249,6 +249,18 @@
         <DCCReference Include="src\entity\ACBrNFe.entity.Transportadora.pas"/>
         <DCCReference Include="src\entity\ACBrNFe.entity.Veiculo.pas"/>
         <DCCReference Include="src\entity\ACBrNFe.entity.VolumeTransportadora.pas"/>
+        <DCCReference Include="src\useCases\apinfe.usecase.interfaces.pas"/>
+        <DCCReference Include="src\useCases\impl\apinfe.usecase.interfaces.impl.Configuracao.pas"/>
+        <DCCReference Include="src\useCases\impl\apinfe.usecase.interfaces.impl.Invoker.pas"/>
+        <DCCReference Include="src\useCases\impl\apinfe.usecase.interfaces.impl.Ide.pas"/>
+        <DCCReference Include="src\useCases\impl\apinfe.usecase.interfaces.impl.Emitente.pas"/>
+        <DCCReference Include="src\useCases\impl\apinfe.usecase.interfaces.impl.Dest.pas"/>
+        <DCCReference Include="src\useCases\impl\apinfe.usecase.interfaces.impl.Produto.pas"/>
+        <DCCReference Include="src\useCases\impl\apinfe.usecase.interfaces.impl.Total.pas"/>
+        <DCCReference Include="src\useCases\impl\apinfe.usecase.interfaces.impl.Fatura.pas"/>
+        <DCCReference Include="src\useCases\impl\apinfe.usecase.interfaces.impl.Duplicata.pas"/>
+        <DCCReference Include="src\useCases\impl\apinfe.usecase.interfaces.impl.Pagamento.pas"/>
+        <DCCReference Include="src\useCases\impl\apinfe.usecase.interfaces.impl.GerarNfe.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
